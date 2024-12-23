@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeCalculatorTheme {
                 val viewModel = viewModel<CalculatorViewModel>()
-                val state = viewModel.state
+
                 val buttonSpacing = 8.dp
 
                 Box(
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
                         .padding(WindowInsets.statusBars.asPaddingValues()) // Add padding for the top bar
                 ) {
                     Calculator(
-                        state = state,
+
                         modifier = Modifier,
                         viewModel = viewModel,
                         buttonSpacing = buttonSpacing,

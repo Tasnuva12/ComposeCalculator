@@ -27,7 +27,7 @@ import com.example.composecalculator.components.CalculatorButton
 
 @Composable
 fun Calculator(
-    state :CalculatorState,
+
     modifier:Modifier= Modifier,
     viewModel: CalculatorViewModel,
     buttonSpacing: Dp =68.dp,
@@ -36,6 +36,7 @@ fun Calculator(
 
 ){
     val scrollState = rememberScrollState()
+    val state=viewModel.state
   Box(modifier=modifier.fillMaxSize()
       .background(Color.DarkGray)
       .padding(16.dp)){
